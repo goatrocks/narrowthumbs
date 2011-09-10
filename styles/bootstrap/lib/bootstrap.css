@@ -417,13 +417,13 @@ body {
   margin-left: 240px;
 }
 a {
-  color: #ffffff;
+  color: #0069d6;
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
 }
 a:hover {
-  color: #808080;
+  color: #0050a3;
   text-decoration: underline;
 }
 /* Typography.less
@@ -1485,13 +1485,13 @@ a.menu:after, .dropdown-toggle:after {
   border-radius: 15px;
 }
 .pills a:hover {
-  background: #808080;
+  background: #0050a3;
   color: #fff;
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
 .pills .active a {
-  background: #ffffff;
+  background: #0069d6;
   color: #fff;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
 }
@@ -1989,17 +1989,4 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 }
 .popover .content p, .popover .content ul, .popover .content ol {
   margin-bottom: 0;
-}
-html, body {
-  background: #000000;
-  color: #ffffff;
-}
-.pills li {
-  font-variant: small-caps;
-}
-.pills li a {
-  text-shadow: 0 1px 1px #000000;
-}
-.pills li.active a {
-  background: #808080;
 }
