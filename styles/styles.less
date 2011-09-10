@@ -1,0 +1,25 @@
+@import "bootstrap/lib/bootstrap.less";
+
+@bg-color: @black;
+@font-color: @white;
+@linkColor: @white;
+@linkColorHover: @gray;
+
+body{
+	background: @bg-color;
+	color: @font-color;
+}
+
+.pills{
+	li{
+		a{
+			text-shadow: 0 1px 1px @black;
+			
+		}
+		font-variant: small-caps;
+		&.active a{
+			background: @linkColorHover;
+	}
+	}
+
+}
