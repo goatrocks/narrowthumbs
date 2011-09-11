@@ -12,8 +12,16 @@ if (!defined('WEBPATH')) die();
 	<meta http-equiv="content-type" content="text/html; charset=<?php echo LOCAL_CHARSET; ?>" />
 	<link rel="stylesheet" href="<?php echo $_zp_themeroot ?>/styles/styles.css" type="text/css" />
 	<?php printRSSHeaderLink('Gallery',gettext('Gallery RSS')); ?>
+	<script language="javascript">
+	function generateMenu()
+	{	
+		//let's stick all these generated ULs together then :)
+		$('#zenpages li').appendTo($('#pills'));
+		$('#zenpages').remove();
+	}
+	</script>
 </head>
-<body>
+<body onload='generateMenu()'>
 	<?php zp_apply_filter('theme_body_open'); ?>
 	<div class="container">
 	<!--Header/Logo area-->
@@ -23,16 +31,18 @@ if (!defined('WEBPATH')) die();
 		<div class="row">
 			<div class="span10 columns">
 				<br/>
-				<ul class="tabs">
+				<ul id="pills" class="tabs">
+					<?php printPageMenu('list-top','zenpages', 'active');
+					//prints Zenpages.
+					 ?>
 					<li class="active"><a href="#">Portfolio</a></li>
-					<li><a href="#">About</a></li><li><a href="#">Contact</a></li> 
-					<li><a href="#">Links</a></li> <li><a href="#">Resume</a></li></div>
+					</ul>
+					</div>
 			<div class="span6 columns">
-				<h1><?php printHomeLink('', ' | '); echo getGalleryTitle(); ?></h1>
+				<h1><?php echo getGalleryTitle(); ?></h1>
 			</div>
 		</div>
 	</div>
-
 	<!--Content/Gallery area-->
 		<div class="row">
 
@@ -46,7 +56,7 @@ if (!defined('WEBPATH')) die();
 				<div class="span1 columns">&nbsp;</div>
 				</div>
 	<hr/>
-	<div id="footer">footer footer footer footer</div>
+	<div id="footer"><?php printZenphotoLink(); ?></div>
 	</div>
 	<?php zp_apply_filter('theme_body_close'); ?>
 </body>
