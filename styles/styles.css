@@ -1994,6 +1994,16 @@ html, body {
   background: #000000;
   color: #ffffff;
 }
+#gallery li {
+  list-style: none !important;
+  display: inline;
+}
+#gallery li a {
+  width: 100px;
+}
+#gallery ul {
+  display: inline;
+}
 .pills li {
   font-variant: small-caps;
 }
